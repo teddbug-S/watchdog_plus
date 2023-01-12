@@ -1,6 +1,4 @@
-
 from watchdog_plus.managers import BaseObserverManager, StartMethods
-
 
 # paths = [
 #     ["/home/teddbug/Desktop", "desktop", False],
@@ -15,7 +13,7 @@ items = [
 manager = BaseObserverManager()
 # configure the handler class
 # it takes extra args for log_file, recursive, filter_modified
-manager.handler_config(filter_modified=True, log_file="watch_log.log")
+manager.handler_config(filter_modified=True)  # , log_file="watch_log.log")
 
 observers = manager.create_observers(items)
 manager.start_observers(observers=observers)
